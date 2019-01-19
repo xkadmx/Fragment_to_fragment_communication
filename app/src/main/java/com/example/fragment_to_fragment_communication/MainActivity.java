@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
 
     private void doFragmentTransaction(Fragment fragment, String tag, boolean addToBackStack, String message){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        if(!message.equals((""))){
+            Bundle bundle = new Bundle();
+            bundle.putString(getString(R.string.intent_message, message));
+            fragment.setArguments((bundle));
+        }
+
         transaction.replace(R.id.main_container, fragment, tag);
         if(addToBackStack) {
             transaction.addToBackStack(tag);
@@ -40,5 +47,19 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
     @Override public void setToolbarTitle(String fragmentTag) {
         mToolbarTitle.setText(fragmentTag);
     }
+
+    @Override public void InflateFragment(String fragmentTag, String message) {
+        if(fragmentTag.equals(getString(R.string.fragment_a))) {
+            AFragment fragment = new AFragment();
+            doFragmentTransaction(fragment, fragmentTag, true, message);
+        }
+        else if(fragmentTag.equals(getString(R.string.fragment_b))){
+
+        }
+        else if(fragmentTag.equals(getString(R.string.fragment_c))){
+
+        }
+    }
 }
+
 

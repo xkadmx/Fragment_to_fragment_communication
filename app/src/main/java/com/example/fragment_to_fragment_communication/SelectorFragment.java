@@ -49,6 +49,7 @@ public class SelectorFragment extends Fragment implements View.OnClickListener, 
         String message = mMessage.getText().toString();
         switch (view.getId()){
             case R.id.btn_fragment_a :{
+                mIMainActivity.inflateFragment(getTag(), message);
 
                 break;
             }
