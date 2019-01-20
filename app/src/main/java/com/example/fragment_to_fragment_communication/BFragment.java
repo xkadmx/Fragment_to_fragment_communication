@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-public class AFragment extends Fragment{
+public class BFragment extends Fragment{
 
-    private static final String TAG = "AFragment";
+    private static final String TAG = "BFragment";
 
     //widgets
     private TextView mDisplayMessage;
@@ -38,7 +38,7 @@ public class AFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_a, container, false);
+        View view = inflater.inflate(R.layout.fragment_b, container, false);
         mDisplayMessage = view.findViewById(R.id.incomming_message);
 
         setIncomingMessage();

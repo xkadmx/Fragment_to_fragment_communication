@@ -1,0 +1,14 @@
+Index: app/src/main/java/com/example/fragment_to_fragment_communication/IMainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/fragment_to_fragment_communication/IMainActivity.java	(date 1547797633000)
++++ app/src/main/java/com/example/fragment_to_fragment_communication/IMainActivity.java	(date 1547930427747)
+@@ -1,5 +1,5 @@
+ package com.example.fragment_to_fragment_communication;
+ 
+ public interface IMainActivity {
+-    void setToolbarTitle(String fragmentTAG);
++    void setToolbarTitle(String fragmentTag);
+ }
